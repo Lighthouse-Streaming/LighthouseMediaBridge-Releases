@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lighthouse Media Bridge Downloads</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #0f1720;
+        color: #f8fafc;
+      }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 32px;
+        box-sizing: border-box;
+      }
+      main {
+        width: min(100%, 680px);
+      }
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(34px, 8vw, 64px);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+      p {
+        margin: 0 0 24px;
+        color: #cbd5e1;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      section {
+        margin-top: 30px;
+        padding-top: 24px;
+        border-top: 1px solid #334155;
+      }
+      h2 {
+        margin: 0 0 12px;
+        font-size: 20px;
+        line-height: 1.25;
+      }
+      ol {
+        margin: 0;
+        padding-left: 22px;
+        color: #cbd5e1;
+        line-height: 1.7;
+      }
+      li + li {
+        margin-top: 8px;
+      }
+      code {
+        display: block;
+        overflow-x: auto;
+        margin-top: 8px;
+        padding: 12px;
+        border: 1px solid #334155;
+        border-radius: 8px;
+        background: #020617;
+        color: #e2e8f0;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 13px;
+      }
+      .primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 22px;
+        border-radius: 8px;
+        background: #38bdf8;
+        color: #06111f;
+        font-weight: 750;
+        text-decoration: none;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px 18px;
+        margin-top: 24px;
+      }
+      .links a {
+        color: #93c5fd;
+      }
+      .meta {
+        margin-top: 20px;
+        color: #94a3b8;
+        font-size: 14px;
+      }
+      .notice {
+        margin-top: 24px;
+        color: #facc15;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Lighthouse Media Bridge</h1>
+      <p id="summary">Loading the latest installer...</p>
+      <a class="primary" id="primary" href="https://github.com/Lighthouse-Streaming/LighthouseMediaBridge-Releases/releases">View downloads</a>
+      <div class="links" id="links"></div>
+      <div class="meta" id="meta"></div>
+      <p class="notice">These are free unsigned installers. macOS and Windows may show first-run safety warnings.</p>
+      <section>
+        <h2>macOS install</h2>
+        <ol>
+          <li>Download the macOS DMG.</li>
+          <li>Open the DMG and drag Lighthouse Media Bridge into Applications.</li>
+          <li>If macOS says the app is damaged or cannot be opened, open Terminal and run:
+            <code>xattr -dr com.apple.quarantine "/Applications/Lighthouse Media Bridge.app"</code>
+          </li>
+          <li>Open Lighthouse Media Bridge from Applications.</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Windows install</h2>
+        <ol>
+          <li>Download the Windows installer.</li>
+          <li>If Windows SmartScreen appears, choose More info.</li>
+          <li>Choose Run anyway.</li>
+        </ol>
+      </section>
+    </main>
+    <script>
+      const fallbackRelease = "https://github.com/Lighthouse-Streaming/LighthouseMediaBridge-Releases/releases";
+      const platformName = () => {
+        const ua = navigator.userAgent || "";
+        const platform = navigator.platform || "";
+        if (/Mac|Darwin/.test(platform) || /Mac OS X/.test(ua)) return "macos";
+        if (/Win/.test(platform) || /Windows/.test(ua)) return "windows";
+        return "";
+      };
+
+      fetch("downloads.json", { cache: "no-store" })
+        .then((response) => {
+          if (!response.ok) throw new Error("downloads.json unavailable");
+          return response.json();
+        })
+        .then((data) => {
+          const platforms = data.platforms || {};
+          const preferredKey = platformName();
+          const preferred = platforms[preferredKey] || platforms.macos || platforms.windows;
+          const primary = document.getElementById("primary");
+          const summary = document.getElementById("summary");
+          const links = document.getElementById("links");
+          const meta = document.getElementById("meta");
+
+          if (preferred) {
+            primary.href = preferred.url;
+            primary.textContent = preferred.label;
+            summary.textContent = preferred.installNote || "Download the latest installer.";
+          }
+
+          Object.entries(platforms).forEach(([key, item]) => {
+            const link = document.createElement("a");
+            link.href = item.url;
+            link.textContent = item.label;
+            links.appendChild(link);
+          });
+
+          const release = document.createElement("a");
+          release.href = data.release || fallbackRelease;
+          release.textContent = "Release notes";
+          links.appendChild(release);
+
+          meta.textContent = data.version ? `Latest version: ${data.version}` : "";
+        })
+        .catch(() => {
+          document.getElementById("summary").textContent = "Downloads are available from the GitHub releases page.";
+        });
+    </script>
+  </body>
+</html>

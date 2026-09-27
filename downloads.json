@@ -1,0 +1,18 @@
+{
+  "version": "1.0.5",
+  "release": "https://github.com/Lighthouse-Streaming/LighthouseMediaBridge-Releases/releases/tag/v1.0.5",
+  "platforms": {
+    "macos": {
+      "label": "Download for macOS",
+      "url": "https://github.com/Lighthouse-Streaming/LighthouseMediaBridge-Releases/releases/download/v1.0.5/Lighthouse.Media.Bridge_1.0.5_aarch64.dmg",
+      "signed": false,
+      "installNote": "Unsigned free build. Drag the app to Applications. If macOS says it is damaged, run the quarantine command shown on this page."
+    },
+    "windows": {
+      "label": "Download for Windows",
+      "url": "https://github.com/Lighthouse-Streaming/LighthouseMediaBridge-Releases/releases/download/v1.0.5/Lighthouse.Media.Bridge_1.0.5_x64-setup.exe",
+      "signed": false,
+      "installNote": "Unsigned free build. If Windows SmartScreen appears, choose More info, then Run anyway."
+    }
+  }
+}
