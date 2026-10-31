@@ -1,14 +1,14 @@
 {
-  "version": "1.0.7",
-  "pub_date": "2026-10-28T19:38:26Z",
+  "version": "1.0.8",
+  "pub_date": "2026-10-31T09:00:06Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRS3gvdzFQdngvQzRKWFZ0a0R2ZFlKNzVIbmZQVjNWdkE1aTdCaWRsR1ZVMGdGWUZDaGN1dUgwSU12eFZvbGd3Z2IwQXlqODlPVHplZnpMWDVQaDZiQWZyNEJ2UkdiUHdrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMjE0ODgwCWZpbGU6TGlnaHRob3VzZSBNZWRpYSBCcmlkZ2UuYXBwLnRhci5negpsWlJEWk9mb3k1YXJGRjI4SnA2V1NabEhrd1czWnFMRE5BNzMwdHVEWDM0ais0T1M0YloydTZpUmttd2laanZFeG5pZDNWTVBjbGVoSWVJZkQ0U1BEdz09Cg==",
-      "url": "https://github.com/Lighthouse-Streaming/LighthouseMediaBridge-Releases/releases/download/v1.0.7/Lighthouse.Media.Bridge.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRS3gvdzFQdngvQzZQR2pBUWMvU28zNnF2cDdBOFdkSThrMVNRT1B3YjNidEpqbzlLR3YwcGx6QXFVZEtFZDRaMHdGSkFKZGlOYUh4cjFrSGZKaHRaQUl3cEpJbncxUVFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNDM1NjIwCWZpbGU6TGlnaHRob3VzZSBNZWRpYSBCcmlkZ2UuYXBwLnRhci5negp1QXMxNWplWU0zSWxQYjdpM2lkb3RzY0dnUGsvelEvWlFlcS9WVWg5b21pRHhYd2lUTFM1bWI5MW52MGlJcUo4b3dXNnhkR1JQQTR1UE9CajFhaW1CQT09Cg==",
+      "url": "https://github.com/Lighthouse-Streaming/LighthouseMediaBridge-Releases/releases/download/v1.0.8/Lighthouse.Media.Bridge.app.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRS3gvdzFQdngvQzgrMmV0UFFodXkyU3JUcUU0Yi9NMjdLSGcrblVWY3hJdStScDJkKzlaK004OE1tZmR6QnpNNVdyRG5acDdXdVd6ZUZ0WGdvcVZrNjdkTXFmNTVrTUF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMjE2MTcwCWZpbGU6TGlnaHRob3VzZSBNZWRpYSBCcmlkZ2VfMS4wLjdfeDY0LXNldHVwLmV4ZQpXUHluNzFMQTk4NC9BcS9MY2hLRjAvMUhzanRDZlhPWDJKaFBHZnM3Zm9FbGVnb3NOWXFzUytUK1JUSkYrcmtOTVM3aEJuS0F0RXV2NGNCV1NHT0xEQT09Cg==",
-      "url": "https://github.com/Lighthouse-Streaming/LighthouseMediaBridge-Releases/releases/download/v1.0.7/Lighthouse.Media.Bridge_1.0.7_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRS3gvdzFQdngvQ3pjcXRPa3J0M0R3cDBwYTZ6dGh6RFJ5QnhHbTNVR0tjdmtlVDFlb01IZGVReDhIVFNrODBFUG94UFM5TWRJZ0RuQTBTdmxnNFdyNGJqUGI0U2dTN1F3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNDM3MDI0CWZpbGU6TGlnaHRob3VzZSBNZWRpYSBCcmlkZ2VfMS4wLjhfeDY0LXNldHVwLmV4ZQp1Mms3ZWlkUXoxcUdLaTlOT3cvNjA2Yy9iQkJFaWYwUDJmYitDMTdzaXljSzdQSnIvcmUwbjFEenJNRTcxanBYdm1FV0hGdVNKcTlaWEFyWloyT1RBdz09Cg==",
+      "url": "https://github.com/Lighthouse-Streaming/LighthouseMediaBridge-Releases/releases/download/v1.0.8/Lighthouse.Media.Bridge_1.0.8_x64-setup.exe"
     }
   }
 }
